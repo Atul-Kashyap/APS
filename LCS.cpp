@@ -19,24 +19,5 @@ int main()
  }
  cout << dp[n1][n2] << endl;
 
-    string str = "";
-   int i = n1, j = n2;
-   while( i > 0 && j > 0){
-        if(s1[i-1] == s2[j-1]){
-         str += s1[i-1];
-         i--;
-         j--;
-       }
-       else{
-         if(dp[i][j-1] >= dp[i-1][j])
-            j--;
-         else
-            i--;
-      }
- } 
-  reverse(str.begin(),str.end()); 
-  cout << str << endl;
-
-
  return 0;
 }
